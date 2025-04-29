@@ -1,0 +1,54 @@
+:root {
+	--lo: #fa9540;
+	--do: #c95e03;
+	--sh: #542700;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+header {
+	height: 45px;
+	width: 100%;
+	background-color: var(--lo);
+	display: flex;
+}
+.logo {
+	background-image: url("../assets/dc_logo.jpeg");
+	background-size: contain;
+	height: 44px;
+	width: 44px;
+	margin: 1px 1px;
+	border-radius: 50px;
+}
+.title {
+	display: flex;
+	align-items: center;
+}
+.title p {
+	text-shadow: 2px 2px 5px var(--sh);
+	margin: 0px 26px;
+	font-size: 35px;
+	color: white;
+}
+nav {
+	display: flex;
+	margin-left: 10vh;
+}
+.navbar {
+	display: flex;
+	font-size: 20px;
+	gap: 16px;
+	align-items: center;
+	text-shadow: 2px 1px 3px var(--sh);
+}
+.navbar a p {
+	border-radius: 8px;
+	padding: 5px 8px;
+	background-color: var(--do);
+}
+.navbar a {
+	text-decoration: none;
+	color: white;
+}
