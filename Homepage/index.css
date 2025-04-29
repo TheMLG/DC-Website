@@ -52,3 +52,30 @@ nav {
 	text-decoration: none;
 	color: white;
 }
+footer{
+	height: 200px;
+	width: 100%;
+	background-color: var(--sh);
+	color: grey;
+	display: flex;
+	gap: 50vh;
+	font-size: 15px;
+	font-weight: bolder;
+} 
+.ft{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0px 0px;
+	justify-content: center;
+}
+.vc{
+	text-align: center;
+}
+ .tv, .lv{
+	font-size: 30px;
+	font-weight: 1000;
+	color: var(--sh);
+	background-color: var(--lo);
+	border-radius: 10px;
+ }
