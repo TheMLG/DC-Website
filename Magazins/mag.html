@@ -3,130 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashnam Circular</title>
+    <title>Magazines</title>
+    <link rel="stylesheet" href="mag.css" />
   </head>
-  <link rel="stylesheet" href="mag.css" />
   <body>
     <header>
-      <div class="logo"></div>
-      <div class="title"><p>Dashanam Circular</p></div>
-      <nav>
-        <div class="navbar">
-          <ul>
-            <li>
-              <a href=""><p>Magazines</p></a>
-            </li>
-            <li>
-              <a href=""><p>Home</p></a>
-            </li>
-            <li>
-              <a href=""><p>Reviews</p></a>
-            </li>
-            <li>
-              <a href=""><p>About Us</p></a>
-            </li>
-            <li>
-              <a href=""><p>Advertisement</p></a>
-            </li>
-            <li>
-              <a href=""><p>Funding</p></a>
-            </li>
-            <li>
-              <a href=""><p>Contribute</p></a>
-            </li>
-          </ul>
-        </div>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <div class="navbar-title">Dashnam Circular</div>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Magazines</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Review</a></li>
+        </ul>
       </nav>
     </header>
-    
-    <div class="search-container">
-      <form
-        class="search-box"
-        role="search"
-        onsubmit="event.preventDefault(); alert('Search submitted: ' + this.search.value);"
-      >
-        <input
-          type="search"
-          name="search"
-          placeholder="Search..."
-          aria-label="Search"
-          required
-        />
-        <button type="submit" aria-label="Submit search">
-          <!-- Magnifying glass SVG icon -->
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 001.48-5.34C15.03 5.35 12.68 3 9.5 3S4 5.35 4 8.39c0 3.04 2.35 5.39 5.5 5.39 1.61 0 3.07-.69 4.03-1.76l.27.28v.79l4.99 5L20 19l-5-5zM9.5 13c-2.49 0-4.5-2.01-4.5-4.5S7.01 4 9.5 4 14 6.01 14 8.5 11.99 13 9.5 13z"
-            />
-          </svg>
-        </button>
-      </form>
-    </div>
 
-    <main class="container">
-      <button id="dSortBtn">d sort</button>
-      <div class="card-container">
-        <div class="card c1">
-          <div class="img"></div>
-          <div class="card-title"></div>
-        </div>
-        <div class="card c2">
-          <div class="img"></div>
-          <div class="card-title"></div>
-        </div>
-        <div class="card c3">
-          <div class="img"></div>
-          <div class="card-title"></div>
-        </div>
-        <div class="card c4">
-          <div class="img"></div>
-          <div class="card-title"></div>
-        </div>
-        <div class="card c5">
-          <div class="img"></div>
-          <div class="card-title"></div>
-        </div>
-        <div class="card c6">
-          <div class="img"></div>
-          <div class="card-title"></div>
-        </div>
-        <div class="card c7">
-          <div class="img"></div>
-          <div class="card-title"></div>
-        </div>
+    <main>
+      <div class="search-box">
+        <form class="search-form" role="search" aria-label="Site search">
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Search magazines..."
+            aria-label="Search magazines"
+          />
+          <button
+            type="submit"
+            class="search-button"
+            aria-label="Submit search"
+          >
+            &#128269;
+          </button>
+        </form>
+        <button class="sort-button" aria-label="Sort magazines">Sort</button>
       </div>
+
+      <section class="magazine-grid">
+        <article class="magazine-card">
+          <div class="img"></div>
+          <h2 class="magazine-title">Magazine Title 1</h2>
+          <p class="magazine-date">January 2024</p>
+        </article>
+        <article class="magazine-card">
+          <div class="img"></div>
+          <h2 class="magazine-title">Magazine Title 2</h2>
+          <p class="magazine-date">February 2024</p>
+        </article>
+        <article class="magazine-card">
+          <div class="img"></div>
+          <h2 class="magazine-title">Magazine Title 3</h2>
+          <p class="magazine-date">March 2024</p>
+        </article>
+        <article class="magazine-card">
+          <div class="img"></div>
+          <h2 class="magazine-title">Magazine Title 4</h2>
+          <p class="magazine-date">April 2024</p>
+        </article>
+        <article class="magazine-card">
+          <div class="img"></div>
+          <h2 class="magazine-title">Magazine Title 5</h2>
+          <p class="magazine-date">April 2024</p>
+        </article>
+        <article class="magazine-card">
+          <div class="img"></div>
+          <h2 class="magazine-title">Magazine Title 6</h2>
+          <p class="magazine-date">April 2024</p>
+        </article>
+        <article class="magazine-card">
+          <div class="img"></div>
+          <h2 class="magazine-title">Magazine Title 7</h2>
+          <p class="magazine-date">April 2024</p>
+        </article>
+      </section>
     </main>
-    <script>
-      document.getElementById('dSortBtn').addEventListener('click', function() {
-        const container = document.querySelector('.card-container');
-        const cards = Array.from(container.children);
-        cards.sort((a, b) => {
-          const aNum = parseInt(a.className.match(/c(\d+)/)[1]);
-          const bNum = parseInt(b.className.match(/c(\d+)/)[1]);
-          return bNum - aNum; // descending order
-        });
-        cards.forEach(card => container.appendChild(card));
-      });
-    </script>
 
     <footer>
-      <div class="cd ft">
-        <p>contact us:</p>
-        <p>Email:- dashnamcircular@gmail.com</p>
-        <p>Phone no. :- 9898550833, 9724410375</p>
+      <div class="visitor-count">
+        Visitors Count: <span id="visitorCount">0</span>
       </div>
-      <div class="links ft">
-        <p>LOGO: Join Whatsapp Group</p>
-        <p>LOGO: Join Whatsapp Channel</p>
-        <p>LOGO: Join Telegram Channel</p>
-      </div>
-      <div class="vc ft">
-        <p>Website Visitors Count</p>
-        <p>Total Visited</p>
-        <div class="tv">10000</div>
-        <p>Live Visitors</p>
-        <div class="lv">100</div>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          >Join our WhatsApp Group</a
+        >
+        <div class="contact-info">
+          <p>Contact us:</p>
+          <p>Email: dashnamcircular@gmail.com</p>
+          <p>Phone: +91 9898550833</p>
+          <p>Phone: +91 9724410375</p>
+        </div>
       </div>
     </footer>
+    <script>
+      const toggleButton = document.querySelector('.navbar-toggle');
+      const navbarMenu = document.querySelector('.navbar-menu');
+
+      toggleButton.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
