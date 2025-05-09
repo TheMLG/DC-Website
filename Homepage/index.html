@@ -1,110 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dashnam Circular</title>
-  </head>
-  <link rel="stylesheet" href="index.css" />
-  <body>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
     <header>
-      <div class="logo"></div>
-      <div class="title"><p>Dashanam Circular</p></div>
-      <nav>
-        <div class="navbar">
-          <ul>
-            <li>
-              <a href=""><p>Magazines</p></a>
-            </li>
-            <li>
-              <a href=""><p>Home</p></a>
-            </li>
-            <li>
-              <a href=""><p>Reviews</p></a>
-            </li>
-            <li>
-              <a href=""><p>About Us</p></a>
-            </li>
-            <li>
-              <a href=""><p>Advertisement</p></a>
-            </li>
-            <li>
-              <a href=""><p>Funding</p></a>
-            </li>
-            <li>
-              <a href=""><p>Contribute</p></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <nav class="navbar">
+            <div class="logo"></div>
+            <div class="navbar-title">Dashnam Circular</div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Magazines</a></li>
+                <li><a href="#">Contribute</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">Review</a></li>
+            </ul>
+        </nav>
+        <section class="banner">
+            <h1>Welcome to Dashnam Circular</h1>
+            <p>Your trusted magazine for the latest news and updates</p>
+        </section>
     </header>
-
-    <div class="banner">
-      <div class="banner-text">
-        <h1>Welcome to Dashnam Circular</h1>
-        <p>
-          Your one-stop destination for all the latest magazines and updates.
-        </p>
-      </div>
-    </div>
-	
     <main>
-      <div>
-        <div class="info">
-          <h1>Title Here</h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Exercitationem error perferendis mollitia reiciendis rem dolores harum
-          repudiandae fuga ducimus eligendi consequuntur necessitatibus modi
-          amet nemo ipsum nulla perspiciatis, quasi tenetur temporibus quae
-          reprehenderit. Minima in velit ut error dolorem officia libero
-          doloremque fugit, quod sunt veniam aperiam placeat deleniti ab? Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Modi nobis illum
-          saepe incidunt, accusantium, fugiat quos reprehenderit blanditiis eius
-          tempore sunt aspernatur dolor atque, sequi ullam nesciunt fugit
-          voluptas ea. Asperiores, molestias odit ipsa quaerat earum veniam.
-          Harum exercitationem ipsum sunt consectetur dolore quod, sit illum
-          omnis rem, facilis, saepe id! Doloribus excepturi animi praesentium?
-          Praesentium a sit nostrum. Excepturi similique a cum fuga minus
-          reiciendis, ex, quod iusto ab nisi consequuntur ratione quaerat
-          provident sapiente illo maiores asperiores, eveniet aut. Possimus
-          nostrum fuga laudantium sit suscipit cum ipsam aliquid dolores dolore
-          numquam, blanditiis, similique adipisci doloribus accusantium
-          consectetur dolorem!
-        </div>
-        <div class="nu">
-          <h1>News & Updates</h1>
-          <div class="ns">
-            <div class="n">news Here</div>
-            <div class="n">news Here</div>
-            <div class="n">news Here</div>
-            <div class="n">news Here</div>
-            <div class="n">news Here</div>
-            <div class="n">news Here</div>
-            <div class="n">news Here</div>
-            <div class="n">news Here</div>
-          </div>
-        </div>
-      </div>
+        <section class="introduction">
+            <h2>Introduction</h2>
+            <p>Dashnam Circular is a magazine dedicated to bringing you the latest news, insightful articles, and updates about our community and beyond. Stay informed and connected with us.</p>
+        </section>
+        <section class="news-updates">
+            <h2>News & Updates</h2>
+            <article>
+                <h3>Latest Issue Released</h3>
+                <p>Our latest issue is now available online and in print. Check out the exciting stories and features inside.</p>
+            </article>
+            <article>
+                <h3>Upcoming Events</h3>
+                <p>Join us for our upcoming events and community gatherings. Stay tuned for dates and details.</p>
+            </article>
+        </section>
     </main>
-
     <footer>
-      <div class="cd ft">
-        <p>contact us:</p>
-        <p>Email:- dashnamcircular@gmail.com</p>
-        <p>Phone no. :- 9898550833, 9724410375</p>
-      </div>
-      <div class="links ft">
-        <p>LOGO: Join Whatsapp Group</p>
-        <p>LOGO: Join Whatsapp Channel</p>
-        <p>LOGO: Join Telegram Channel</p>
-      </div>
-      <div class="vc ft">
-        <p>Website Visitors Count</p>
-        <p>Total Visited</p>
-        <div class="tv">10000</div>
-        <p>Live Visitors</p>
-        <div class="lv">100</div>
-      </div>
+        <div class="visitor-count">
+            Visitors Count: <span id="visitorCount">0</span>
+        </div>
+        <div class="footer-links">
+            <a href="#" target="_blank" rel="noopener noreferrer">Join our WhatsApp Group</a>
+            <div class="contact-info">
+                <p>Contact us:</p>
+                <p>Email: dashnamcircular@gmail.com</p>
+                <p>Phone: +91 9898550833</p>
+                <p>Phone: +91 9724410375</p>
+            </div>
+        </div>
     </footer>
-  </body>
+    <!-- <script>
+        // Simple visitor count simulation using localStorage
+        function updateVisitorCount() {
+            let count = localStorage.getItem('visitorCount');
+            if (!count) {
+                count = 0;
+            }
+            count = parseInt(count) + 1;
+            localStorage.setItem('visitorCount', count);
+            document.getElementById('visitorCount').textContent = count;
+        }
+        updateVisitorCount();
+
+        // Toggle navbar menu on mobile
+        const toggleButton = document.querySelector('.navbar-toggle');
+        const menu = document.querySelector('.navbar-menu');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script> -->
+</body>
 </html>
