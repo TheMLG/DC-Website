@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titel here</title>
+    <style>
+      :root {
+        --do: #a45800;
+        --lo: #ff8903;
+        --tc: #6d3a00;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+      .logo {
+        background-color: black;
+        height: 50px;
+        width: 50px;
+        padding: 0px 0px;
+        border-radius: 30px;
+      }
+      .navbar {
+        background-color: var(--lo);
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        /* justify-content: center; */
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .navbar-title {
+        flex-shrink: 0;
+      }
+
+      .navbar-menu {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .navbar-menu li a {
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-menu li a:hover {
+        color: #ffcc00;
+      }
+
+      .navbar-toggle {
+        display: none;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* Banner and other styles remain unchanged */
+      .banner {
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: var(--do); /* fallback color */
+      }
+      footer {
+        background-color: var(--tc);
+        color: white;
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
+
+      footer .visitor-count {
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      footer .footer-links a {
+        color: #ffcc00;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+
+      footer .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      footer .contact-info p {
+        margin: 0.2rem 0;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 600px) {
+        main {
+          margin: 1rem;
+          padding: 0 0.5rem;
+        }
+        .navbar {
+          font-size: 1.2rem;
+          padding: 0.8rem 1rem;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+        .navbar-menu {
+          flex-direction: column;
+          width: 100%;
+          display: none;
+          margin-top: 0.5rem;
+        }
+        .navbar-menu.active {
+          display: flex;
+        }
+        .navbar-menu li {
+          margin: 0.5rem 0;
+          text-align: center;
+        }
+        .navbar-toggle {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <div class="navbar-title">Dashnam Circular</div>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Magazines</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Review</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <footer>
+      <div class="visitor-count">
+        Visitors Count: <span id="visitorCount">0</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          >Join our WhatsApp Group</a
+        >
+        <div class="contact-info">
+          <p>Contact us:</p>
+          <p>Email: dashnamcircular@gmail.com</p>
+          <p>Phone: +91 9898550833</p>
+          <p>Phone: +91 9724410375</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
