@@ -1,85 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dashnam Circular</title>
     <link rel="stylesheet" href="index.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo"></div>
-            <div class="navbar-title">Dashnam Circular</div>
-            <button class="navbar-toggle" aria-label="Toggle navigation">
-                &#9776;
-            </button>
-            <ul class="navbar-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Magazines</a></li>
-                <li><a href="#">Contribute</a></li>
-                <li><a href="#">Advertise</a></li>
-                <li><a href="#">Review</a></li>
-            </ul>
-        </nav>
-        <section class="banner">
-            <h1>Welcome to Dashnam Circular</h1>
-            <p>Your trusted magazine for the latest news and updates</p>
-        </section>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <div class="navbar-title">Dashnam Circular</div>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Magazines</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Review</a></li>
+          <li><a href="#">Funding</a></li>
+        </ul>
+      </nav>
+      <section class="banner">
+        <h1>Welcome to Dashnam Circular</h1>
+        <p>Your trusted magazine for the latest news and updates</p>
+      </section>
     </header>
 
     <main>
-        <section class="introduction">
-            <h2>Introduction</h2>
-            <p>Dashnam Circular is a magazine dedicated to bringing you the latest news, insightful articles, and updates about our community and beyond. Stay informed and connected with us.</p>
-        </section>
-        <section class="news-updates">
-            <h2>News & Updates</h2>
-            <article>
-                <h3>Latest Issue Released</h3>
-                <p>Our latest issue is now available online and in print. Check out the exciting stories and features inside.</p>
-            </article>
-            <article>
-                <h3>Upcoming Events</h3>
-                <p>Join us for our upcoming events and community gatherings. Stay tuned for dates and details.</p>
-            </article>
-        </section>
+      <section class="introduction">
+        <h2>Introduction</h2>
+        <p>
+          Dashnam Circular is a magazine dedicated to bringing you the latest
+          news, insightful articles, and updates about our community and beyond.
+          Stay informed and connected with us.
+        </p>
+      </section>
+      <section class="news-updates">
+        <h2>News & Updates</h2>
+        <article>
+          <h3>Latest Issue Released</h3>
+          <p>
+            Our latest issue is now available online and in print. Check out the
+            exciting stories and features inside.
+          </p>
+        </article>
+        <article>
+          <h3>Upcoming Events</h3>
+          <p>
+            Join us for our upcoming events and community gatherings. Stay tuned
+            for dates and details.
+          </p>
+        </article>
+      </section>
     </main>
-    
+
     <footer>
-        <div class="visitor-count">
-            Visitors Count: <span id="visitorCount">0</span>
+      <div class="visitor-count">
+        Visitors Count: <span id="visitorCount">0</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          >Join our WhatsApp Group</a
+        >
+        <div class="contact-info">
+          <p>Contact us:</p>
+          <p>Email: dashnamcircular@gmail.com</p>
+          <p>Phone: +91 9898550833</p>
+          <p>Phone: +91 9724410375</p>
         </div>
-        <div class="footer-links">
-            <a href="#" target="_blank" rel="noopener noreferrer">Join our WhatsApp Group</a>
-            <div class="contact-info">
-                <p>Contact us:</p>
-                <p>Email: dashnamcircular@gmail.com</p>
-                <p>Phone: +91 9898550833</p>
-                <p>Phone: +91 9724410375</p>
-            </div>
-        </div>
+      </div>
     </footer>
-    <!-- <script>
-        // Simple visitor count simulation using localStorage
-        function updateVisitorCount() {
-            let count = localStorage.getItem('visitorCount');
-            if (!count) {
-                count = 0;
-            }
-            count = parseInt(count) + 1;
-            localStorage.setItem('visitorCount', count);
-            document.getElementById('visitorCount').textContent = count;
-        }
-        updateVisitorCount();
+    <script>
+      // Simple visitor count simulation using localStorage
+      //   function updateVisitorCount() {
+      //     let count = localStorage.getItem("visitorCount");
+      //     if (!count) {
+      //       count = 0;
+      //     }
+      //     count = parseInt(count) + 1;
+      //     localStorage.setItem("visitorCount", count);
+      //     document.getElementById("visitorCount").textContent = count;
+      //   }
+      //   updateVisitorCount();
 
-        // Toggle navbar menu on mobile
-        const toggleButton = document.querySelector('.navbar-toggle');
-        const menu = document.querySelector('.navbar-menu');
+      // Toggle navbar menu on mobile
+      const toggleButton = document.querySelector(".navbar-toggle");
+      const menu = document.querySelector(".navbar-menu");
 
-        toggleButton.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script> -->
-</body>
+      toggleButton.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>
