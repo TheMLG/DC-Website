@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About US</title>
+    <link rel="stylesheet" href="au.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <div class="navbar-title">Dashnam Circular</div>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Magazines</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Funding</a></li>
+          <li><a href="#">Review</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about-us">
+        <h1>About Us</h1>
+        <p>
+          Welcome to Dashnam Circular! We are a dedicated team committed to
+          bringing you the latest news, insightful articles, and engaging
+          content.
+        </p>
+        <div class="team">
+          <div class="team-member">
+            <img src="../assets/dc_logo.jpeg" alt="Person 1" />
+            <h2>Lalitputi Goswami</h2>
+            <h3>Founder & Editor</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
+              sed velit ullam officia quasi. Provident nemo corporis aperiam vel
+              sit!
+            </p>
+          </div>
+          <div class="team-member">
+            <img src="../assets/dc_logo.jpeg" alt="Person 1" />
+            <h2>Lalitputi Goswami</h2>
+            <h3>Founder & Editor</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
+              sed velit ullam officia quasi. Provident nemo corporis aperiam vel
+              sit!
+            </p>
+          </div>
+          <div class="team-member">
+            <img src="../assets/dc_logo.jpeg" alt="Person 1" />
+            <h2>Lalitputi Goswami</h2>
+            <h3>Founder & Editor</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
+              sed velit ullam officia quasi. Provident nemo corporis aperiam vel
+              sit!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="visitor-count">
+        Visitors Count: <span id="visitorCount">0</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          >Join our WhatsApp Group</a
+        >
+        <div class="contact-info">
+          <p>Contact us:</p>
+          <p>Email: dashnamcircular@gmail.com</p>
+          <p>Phone: +91 9898550833</p>
+          <p>Phone: +91 9724410375</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggleButton = document.querySelector(".navbar-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      toggleButton.addEventListener("click", () => {
+        navbarMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
