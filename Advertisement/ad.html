@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titel here</title>
+    <link rel="stylesheet" href="ad.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <div class="navbar-title">Dashnam Circular</div>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Magazines</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Funding</a></li>
+          <li><a href="#">Review</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="ad-application">
+        <h2>Apply to Give Advertisement</h2>
+        <form id="adForm" action="#" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Enter 10 digit phone number" />
+          </div>
+          <div class="form-group">
+            <label for="details">Advertisement Details:</label>
+            <textarea id="details" name="details" rows="5" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="adPhoto">Upload Advertisement Photo:</label>
+            <input type="file" id="adPhoto" name="adPhoto" accept="image/*" required />
+          </div>
+          <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="visitor-count">
+        Visitors Count: <span id="visitorCount">0</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          >Join our WhatsApp Group</a
+        >
+        <div class="contact-info">
+          <p>Contact us:</p>
+          <p>Email: dashnamcircular@gmail.com</p>
+          <p>Phone: +91 9898550833</p>
+          <p>Phone: +91 9724410375</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggleButton = document.querySelector(".navbar-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      toggleButton.addEventListener("click", () => {
+        navbarMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
