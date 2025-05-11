@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titel here</title>
+    <link rel="stylesheet" href="cont.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <div class="navbar-title">Dashnam Circular</div>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Magazines</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Funding</a></li>
+          <li><a href="#">Review</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="submission-form-section">
+        <h2>Submit Your Article or Idea</h2>
+        <form id="articleSubmissionForm" action="#" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <textarea id="name" name="name" rows="2" placeholder="Enter your name"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="title">Article Title:</label>
+            <input type="text" id="title" name="title" required placeholder="Enter the title of your article" />
+          </div>
+          <div class="form-group">
+            <label for="contentFile">Upload Article Text File:</label>
+            <input type="file" id="contentFile" name="contentFile" accept=".txt,text/plain" />
+          </div>
+          <div class="form-group">
+            <label for="idea">Article Idea:</label>
+            <textarea id="idea" name="idea" rows="4" placeholder="Share your article idea"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="picture">Upload Picture:</label>
+            <input type="file" id="picture" name="picture" accept="image/*" />
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="visitor-count">
+        Visitors Count: <span id="visitorCount">0</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          >Join our WhatsApp Group</a
+        >
+        <div class="contact-info">
+          <p>Contact us:</p>
+          <p>Email: dashnamcircular@gmail.com</p>
+          <p>Phone: +91 9898550833</p>
+          <p>Phone: +91 9724410375</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggleButton = document.querySelector(".navbar-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      toggleButton.addEventListener("click", () => {
+        navbarMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
